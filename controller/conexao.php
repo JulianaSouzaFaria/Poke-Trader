@@ -1,11 +1,17 @@
 <?php
 //pagina criada para conectar com banco de dados
-class Conexao {
 
-	private $host = 'localhost';
-	private $dbname = 'bxblue_poke';
-	private $user = 'root';
-	private $pass = '';
+$pdo = new PDO("pgsql:" . sprintf(
+    "host=%s;port=%s;user=%s;password=%s;dbname=%s",
+    $db["host"],"ec2-3-234-22-132.compute-1.amazonaws.com"
+    $db["port"],"5432"
+    $db["user"],"yteemapwrjznlo"
+    $db["pass"],"ae7641251938d5855765767517ce583a1fa3c758f11769efd6e571bdfafbc374
+"
+    ltrim($db["path"], "/")
+));
+
+
 
 	public function conectar(){
 		try{ //dados conexao

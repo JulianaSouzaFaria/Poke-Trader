@@ -14,7 +14,7 @@
 		$pok2 = array();
 		$pok2name = array();
 		
-		$pok2 = $_POST["pok2"];
+		$pok2 = $_POST["pokemonLadoB"];
 		$pok2name = $_POST["pok2name"];
 
 		for($i=0; $i < count($pok2); $i++)
@@ -30,7 +30,7 @@
 		$pok2 = array();
 		$pok2name = array();
 		
-		$pok1 = $_POST["pok1"];
+		$pok1 = $_POST["pokemonLadoA"];
 		$pok1name = $_POST["pok1name"];
 
 		for($i=0; $i < count($pok1); $i++)
