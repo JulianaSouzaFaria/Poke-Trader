@@ -1,7 +1,6 @@
 
-$(document).ready(function()
-{
- 
+$(document).ready(function(){
+
   //Atribui aos campos de código do Pokemon a função que carrega os dados dos pokemons:
   $("#pok11").focusout(function(){
     carregarPokemon("pok11");
@@ -40,27 +39,16 @@ $(document).ready(function()
     carregarPokemon("pok26");
   });
   
-
-
-  
-/*
-  //Atribui aos campos de código do Pokemon a função que carrega os dados dos pokemons:
-  $(document).ready(function(){
-  $(".escolhaPokemon").focusout(function(){
-    carregarPokemon("pok11");
-  });
 });
-*/
-
 
 
 
 //Cria uma função de verificação se a troca é justa ou não:
- $('input[name="resultadoPokemon"]').click(function()
-  {
-    
+$('input[name="resultadoPokemon"]').click(function()
+{
+
     //Diferenca Maxima = 10%
- 
+
     //Carrega a soma dos lados:
     let soma1 = parseInt($("#resultado1").val(), 10) || 0;
     let soma2 = parseInt($("#resultado2").val(), 10) || 0;
@@ -77,42 +65,51 @@ $(document).ready(function()
     }
   });
 
-});
 
 
 
-//Carregas os dados de um Pokemon da API informado por número ou nome:
+
+//Carregas os dados de um Pokemon da API informado por nome:
 function carregarPokemon(nomeCampo)
 {
-  var pokemon = $("#"+nomeCampo).val();
-  var pokemonAPIURL="";
+  let pokemon = $("#"+nomeCampo).val();
+  let pokemonAPIURL="";
   if(pokemon!=="")
   {
     pokemonAPIURL = "https://pokeapi.co/api/v2/pokemon/"+pokemon+"/";
-
+    
     $.ajax({
-    url: pokemonAPIURL,
-    type: 'GET',
-    dataType: 'json',
-    success: function(data) 
-            {
+      url: pokemonAPIURL,
+      type: 'GET',
+      dataType: 'json',
+      success: function(data) 
+      {
               //console.log("GetPoke by ID");
               //console.log(data);
-              $("#"+nomeCampo+"name").val(data.name);
+              let img = data["sprites"]["front_default"];
+              document.getElementById("imagemCard1").setAttribute("src", img);
+              //$("#"+nomeCampo+"name").val(data.name);
               $("#"+nomeCampo+"base").val(data.base_experience);
-              
+
               somaLados();
             }
-    });
+          });
   }
 }
+
+/*   $("[name='pok1name[]']").focusout(function(){
+    carregarPokemon("pok1name[]");
+  });
+  });
+
+  */
 
 //Faz todo o somatório:
 function somaLados()
 {
   //Soma lado A:
   var total_lado_a = 0;
-  var x = document.getElementsByName("pok1[]");
+  var x = document.getElementsByName("pokemonLadoA[]");
   for (var i = 0; i < x.length; i++) 
   {      
     total_lado_a += parseInt(x[i].value, 10) || 0;
@@ -121,7 +118,7 @@ function somaLados()
 
   //Soma lado B:
   var total_lado_b = 0;
-  var x = document.getElementsByName("pok2[]");
+  var x = document.getElementsByName("pokemonLadoB[]");
   for (var i = 0; i < x.length; i++) 
   {      
     total_lado_b += parseInt(x[i].value, 10) || 0;
@@ -132,7 +129,7 @@ function somaLados()
 //Habilita os campos para fazer a gravação das informações:
 function habilitarCampos()
 {
-  var x = document.getElementsByName("pok1[]");
+  var x = document.getElementsByName("pokemonLadoA[]");
   var y = document.getElementsByName("pok1name[]");
   for (var i = 0; i < x.length; i++) 
   {      
@@ -143,7 +140,7 @@ function habilitarCampos()
     }
   }
 
-  var x = document.getElementsByName("pok2[]");
+  var x = document.getElementsByName("pokemonLadoB[]");
   var y = document.getElementsByName("pok2name[]");
   for (var i = 0; i < x.length; i++) 
   {      
@@ -156,3 +153,17 @@ function habilitarCampos()
   return true;
 }
 
+
+function apenasLetras(e)
+{
+  var expressao = /[0-9]/;
+
+  if(expressao.test(String.fromCharCode(e.keyCode)))
+  {
+    return false;
+  }
+  else
+  {
+    return true;
+  }
+}

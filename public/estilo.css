@@ -66,9 +66,15 @@ p{
 	font-size: .8em;
 	margin-bottom: 10px;}
 
-label{
+label {
 	color: #5a5755;
 	font-size: .8em;
+	padding: 5px 0;
+	display: block;}
+
+th {
+	color: #5a5755;
+	font-size: .6em;
 	padding: 5px 0;}
 
 span{
@@ -76,13 +82,61 @@ span{
 	font-size: .6em;
 	padding: 5px 0;}
 
-.pokNome {
-	width: 200px;}
+/*.pokNome {
+	width: 200px;
+color: #5a5755;
+	font-size: .7em;
+	padding: 5px 0;
+font-weight: 700;}
+*/
 
-.pokBase{
-	width: 200px;}
+.pokemonBaseExperience{
+	background-color: #D0D5D1;
+	width: 60px;
+	color: #5a5755;
+	font-size: .6em;
+	padding: 5px 0;
+	font-weight: 700;
+	display: block;
+	margin: 3px auto;
+	text-align: center;
+	}
 
 .form-control{
-	background-color: #D0D5D1;
+	border: 1px solid gray;
+	background-color:#D0D5D1;
+	border-radius: 10px;
 	align-content: center;
-	font-weight: 700;}
+	font-weight: 700;
+	font-size: .6em;
+	display: block;
+	margin: 0 auto;
+	width: 190px;
+	text-align: center;}
+
+
+div.card{
+	width: 200px;
+	height: 220px;
+	background-color: #D0D5D1;
+	border-radius: 10px;
+	box-shadow: 5px 5px 3px black;
+	float: left;
+	position: relative;
+    left: 8%;
+	margin: 10px;
+
+}
+
+.ambienteImagem{
+	background-color: #F2F2F2;
+	padding: 10px 0;
+}
+
+.sprites{
+	width: 120px;
+	height: 120px;
+	text-align: center; 
+	display: block;
+	margin: 0 auto;
+}
