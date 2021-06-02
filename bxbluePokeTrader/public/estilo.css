@@ -1,0 +1,142 @@
+*{
+margin:0;
+padding:0;}
+
+body, html {
+	font-size: 16px;
+	font-family: sans-serif;
+	height: 100%;
+	margin: 0;
+	color: #777}
+
+.caixa1, .caixa2, .caixa3{
+	position:relative;
+	height: 100%;
+	opacity: .7;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;}
+
+.caixa1 {
+	background-image: url(../imagens/2.jpeg);
+	background-size: cover;}
+
+.caixa2 {
+	background-image: url(../imagens/3.jpeg);
+	background-size: cover;}
+
+.caixa3 {
+	background-image: url(../imagens/4.jpeg);
+	background-size: cover;}
+
+.conteudo {
+	color: black;
+	background: white;
+	text-align: justify;
+	padding: 50px 80px;
+	font-size: 25px;}
+
+.titulo {
+	color: #fff;
+	padding: 18px;
+	font-size: 2em;
+	letter-spacing: 5px;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 100%;
+	text-align: center;}
+
+.centralizar {
+	background: #fff;
+	color: black;
+	padding: 18px;
+	font-size: 35px;
+	letter-spacing: 5px;
+	font-family: Road;
+	font-weight: bold;	}
+
+h3{
+	color: #5a5755;
+	font-size: 1.1em;
+	padding: 5px 0;}
+
+p{
+	font-size: .8em;
+	margin-bottom: 10px;}
+
+label {
+	color: #5a5755;
+	font-size: .8em;
+	padding: 5px 0;
+	display: block;}
+
+th {
+	color: #5a5755;
+	font-size: .6em;
+	padding: 5px 0;}
+
+span{
+	color: #5a5755;
+	font-size: .6em;
+	padding: 5px 0;}
+
+/*.pokNome {
+	width: 200px;
+color: #5a5755;
+	font-size: .7em;
+	padding: 5px 0;
+font-weight: 700;}
+*/
+
+.pokemonBaseExperience{
+	background-color: #D0D5D1;
+	width: 60px;
+	color: #5a5755;
+	font-size: .6em;
+	padding: 5px 0;
+	font-weight: 700;
+	display: block;
+	margin: 3px auto;
+	text-align: center;
+	}
+
+.form-control{
+	border: 1px solid gray;
+	background-color:#D0D5D1;
+	border-radius: 10px;
+	align-content: center;
+	font-weight: 700;
+	font-size: .6em;
+	display: block;
+	margin: 0 auto;
+	width: 190px;
+	text-align: center;}
+
+
+div.card{
+	width: 200px;
+	height: 220px;
+	background-color: #D0D5D1;
+	border-radius: 10px;
+	box-shadow: 5px 5px 3px black;
+	float: left;
+	position: relative;
+    left: 8%;
+	margin: 10px;
+
+}
+
+.ambienteImagem{
+	background-color: #F2F2F2;
+	padding: 10px 0;
+}
+
+.sprites{
+	width: 120px;
+	height: 120px;
+	text-align: center; 
+	display: block;
+	margin: 0 auto;
+}
