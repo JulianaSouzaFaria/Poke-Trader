@@ -31,12 +31,12 @@
   <p style="text-align: center">
     Você pode simular a troca dos seus Pokemons!
     <br><br>
-    No lado A, coloque todos os que deseja oferecer (no máximo 6!)
+    No lado A, digite nos cards os Pokemons que deseja oferecer (no máximo 6!)
     <br>
-    No lado B, todos os Pokemons que deseja ter!
+    No lado B, digite os Pokemons que deseja ter!
     <br><br>
     O cálculo será feito baseado na força de cada Pokemón e a troca
-    <br>é considerada justa se tiver uma diferença de até 2 pontos!
+    <br>é considerada justa se tiver uma diferença de até 10% entre os valores!
     <br><br>
     Bora lá! Boa sorte!     
   </p>
@@ -48,131 +48,114 @@
 <div class="conteudo">
   <!-- LADO A -->
   <form action="troca_controller.php?acao=inserir" method="post" onsubmit="return habilitarCampos()">
+
     <div class="row">
       <div class="col-md-6">
 
-        <div class="card-body font-weight-bold text-center" style="border: 1px solid #434D6B">             
-          <div class="form-group ladoA">
+       
+        <div class="form-group card-body font-weight-bold text-center" style="border: 1px solid #434D6B;">
 
-            <label for="jog1">Lado A: Quero trocar meus Pokemons (máximo 6)</label>
-            
-            <input type="text" class="form-control" id="pok11" placeholder="Nome do seu Pokemon"  >
-            <div class="button floatLeft" >
-              <span>Nome:</span><input id="pok11name" name="pok1name[]" class="pokNome" type="text" disabled="disabled">
-              <span>Força:</span><input id="pok11base" name="pok1[]" class="pokBase" type="number" disabled="disabled">
-              
-            </div>
-            
-            <br>
+          <label for="jog1">Lado A: Pokemons ofertados (máximo 6)</label>
 
-            <input type="text" class="form-control" id="pok12" placeholder="Nome do seu Pokemon">
-            <div class="button floatLeft">
-              <span>Nome:</span><input id="pok12name" name="pok1name[]" class="pokNome" type="text" disabled="disabled">
-              <span>Força:</span><input id="pok12base" name="pok1[]" class="pokBase" type="number" disabled="disabled">
-            </div>
+          <div class="card">
+            <input type="text" name="pok1name[]" class="form-control " id="pok11" placeholder="Digite nome Pokemon" onKeypress="return apenasLetras(event)">
+            <div class="ambienteImagem"><img id="imagemCard1" class="sprites"></div>
+            <input id="pok11base" name="pokemonLadoA[]" class="pokemonBaseExperience" type="number" disabled="disabled" placeholder="Força:">
+          </div>
 
-            <br>
+          <div class="card">
+            <input type="text" name="pok1name[]" class="form-control" id="pok12" placeholder="Digite nome Pokemon" onKeypress="return apenasLetras(event)">
+            <div class="ambienteImagem"><img id="imagemCard2" class="sprites"></div>
+            <input id="pok12base" name="pokemonLadoA[]" class="pokemonBaseExperience" type="number" disabled="disabled" placeholder="Força:">
+          </div>
 
-            <input type="text" class="form-control" id="pok13" placeholder="Nome do seu Pokemon">
-            <div class="button floatLeft">
-              <span>Nome:</span><input id="pok13name" name="pok1name[]" class="pokNome" type="text" disabled="disabled">
-              <span>Força:</span><input id="pok13base" name="pok1[]" class="pokBase" type="number" disabled="disabled">
-            </div>
+          <div class="card">
+            <input type="text" name="pok1name[]" class="form-control" id="pok13" placeholder="Digite nome Pokemon" onKeypress="return apenasLetras(event)">
+            <div class="ambienteImagem"><img id="imagemCard3" class="sprites"></div>
+            <input id="pok13base" name="pokemonLadoA[]" class="pokemonBaseExperience" type="number" disabled="disabled" placeholder="Força:">
+          </div>
 
-            <br>
+          <div class="card">
+            <input type="text" name="pok1name[]" class="form-control" id="pok14" placeholder="Digite nome Pokemon" onKeypress="return apenasLetras(event)">
+            <div class="ambienteImagem"><img id="imagemCard4" class="sprites"></div>
+            <input id="pok14base" name="pokemonLadoA[]" class="pokemonBaseExperience" type="number" disabled="disabled" placeholder="Força:">
+          </div>
 
-            <input type="text" class="form-control" id="pok14" placeholder="Nome do seu Pokemon">
-            <div class="button floatLeft">
-              <span>Nome:</span><input id="pok14name" name="pok1name[]" class="pokNome" type="text" disabled="disabled">
-              <span>Força:</span><input id="pok14base" name="pok1[]" class="pokBase" type="number" disabled="disabled">
-            </div>
+          <div class="card">
+            <input type="text" name="pok1name[]" class="form-control" id="pok15" placeholder="Digite nome Pokemon" onKeypress="return apenasLetras(event)">
+            <div class="ambienteImagem"><img id="imagemCard5" class="sprites"></div>
+            <input id="pok15base" name="pokemonLadoA[]" class="pokemonBaseExperience" type="number" disabled="disabled" placeholder="Força:">
+          </div>
 
-            <br>
+          <div class="card">
+            <input type="text" name="pok1name[]" class="form-control" id="pok16" placeholder="Digite nome Pokemon" onKeypress="return apenasLetras(event)">
+            <div class="ambienteImagem"><img id="imagemCard6" class="sprites"></div>
+            <input id="pok16base" name="pokemonLadoA[]" class="pokemonBaseExperience" type="number" disabled="disabled" placeholder="Força:">
+          </div>
 
-            <input type="text" class="form-control" id="pok15" placeholder="Nome do seu Pokemon">
-            <div class="button floatLeft">
-              <span>Nome:</span><input id="pok15name" name="pok1name[]" class="pokNome" type="text" disabled="disabled">
-              <span>Força:</span><input id="pok15base" name="pok1[]" class="pokBase" type="number" disabled="disabled">
-            </div>
 
-            <br>
+          
+          <input type="number" class="form-control" name="resultado1" id="resultado1" readonly placeholder="Total =" style="display: block; margin: 0 auto;">        
 
-            <input type="text" class="form-control" id="pok16" placeholder="Nome do seu Pokemon">
-            <div class="button floatLeft">
-              <span>Nome:</span><input id="pok16name" name="pok1name[]" class="pokNome" type="text" disabled="disabled">
-              <input id="pok16base" name="pok1[]" class="pokBase" type="number" disabled="disabled">
-            </div>
-
-            <br>
-            
-            <input type="number" class="form-control" name="resultado1" id="resultado1" readonly placeholder="Total=">
-            
-          </div>            
-        </div>
+        </div>            
+        
       </div>
 
       <!-- LADO B -->
       <div class="col-md-6">          
-        <div class="card-body font-weight-bold text-center" style="border: 1px solid #434D6B">            
-          <div class="form-group">
-            <label for="jog2">Lado B: Quero esses... Topa?</label>
+        
 
-            <input type="text" class="form-control" id="pok21" placeholder="Nome do seu Pokemon">
-            <div class="button floatLeft">
-              <span>Nome:</span><input id="pok21name" name="pok2name[]" class="pokNome" type="text" disabled="disabled">
-              <span>Força:</span><input id="pok21base" name="pok2[]" class="pokBase" type="number" disabled="disabled">
-            </div>
 
-            <br>
+        <div class="form-group card-body font-weight-bold text-center" style="border: 1px solid #434D6B;">
+          
+          <label for="jog2">Lado B: Pokemons requeridos</label>
 
-            <input type="text" class="form-control" id="pok22" placeholder="Nome do seu Pokemon">
-            <div class="button floatLeft">
-              <span>Nome:</span><input id="pok22name" name="pok2name[]" class="pokNome" type="text" disabled="disabled">
-              <span>Força:</span><input id="pok22base" name="pok2[]" class="pokBase" type="number" disabled="disabled">
-            </div>
-
-            <br>
-
-            <input type="text" class="form-control" id="pok23" placeholder="Nome do seu Pokemon">
-            <div class="button floatLeft">
-              <span>Nome:</span><input id="pok23name" name="pok2name[]" class="pokNome" type="text" disabled="disabled">
-              <span>Força:</span><input id="pok23base" name="pok2[]" class="pokBase" type="number" disabled="disabled">
-            </div>
-
-            <br>
-
-            <input type="text" class="form-control" id="pok24" placeholder="Nome do seu Pokemon">
-            <div class="button floatLeft">
-              <span>Nome:</span><input id="pok24name" name="pok2name[]" class="pokNome" type="text" disabled="disabled">
-              <span>Força:</span><input id="pok24base" name="pok2[]" class="pokBase" type="number" disabled="disabled">
-            </div>
-
-            <br>
-
-            <input type="text" class="form-control" id="pok25" placeholder="Nome do seu Pokemon">
-            <div class="button floatLeft">
-              <span>Nome:</span><input id="pok25name" name="pok2name[]" class="pokNome" type="text" disabled="disabled">
-              <span>Força:</span><input id="pok25base" name="pok2[]" class="pokBase" type="number" disabled="disabled">
-            </div>
-
-            <br>
-
-            <input type="text" class="form-control" id="pok26" placeholder="Nome do seu Pokemon">
-            <div class="button floatLeft">
-              <span>Nome:</span><input id="pok26name" name="pok2name[]" class="pokNome" type="text" disabled="disabled">
-              <span>Força:</span><input id="pok26base" name="pok2[]" class="pokBase" type="number" disabled="disabled">
-            </div>
-
-            <br>
-
-            <input type="number" class="form-control" name="resultado2" id="resultado2" readonly placeholder="Total=" value="">
-
+          <div class="card" >
+            <input type="text" name="pok2name[]" class="form-control" id="pok21" placeholder="Digite nome Pokemon" onKeypress="return apenasLetras(event)">
+            <div class="ambienteImagem"><img id="imagemCard7" class="sprites"></div>
+            <input id="pok21base" name="pokemonLadoB[]" class="pokemonBaseExperience" type="number" disabled="disabled" placeholder="Força:">
           </div>
+
+          <div class="card">
+            <input type="text" name="pok2name[]" class="form-control" id="pok22" placeholder="Digite nome Pokemon" onKeypress="return apenasLetras(event)">
+            <div class="ambienteImagem"><img id="imagemCard8" class="sprites"></div>
+            <input id="pok22base" name="pokemonLadoB[]" class="pokemonBaseExperience" type="number" disabled="disabled" placeholder="Força:">
+          </div>
+
+          <div class="card">
+            <input type="text" name="pok2name[]" class="form-control" id="pok23" placeholder="Digite nome Pokemon" onKeypress="return apenasLetras(event)">
+            <div class="ambienteImagem"><img id="imagemCard9" class="sprites"></div>
+            <input id="pok23base" name="pokemonLadoB[]" class="pokemonBaseExperience" type="number" disabled="disabled" placeholder="Força:">
+          </div>
+
+          <div class="card">
+            <input type="text" name="pok2name[]" class="form-control" id="pok24" placeholder="Digite nome Pokemon" onKeypress="return apenasLetras(event)">
+            <div class="ambienteImagem"><img id="imagemCard10" class="sprites"></div>
+            <input id="pok24base" name="pokemonLadoB[]" class="pokemonBaseExperience" type="number" disabled="disabled" placeholder="Força:">
+          </div>
+
+          <div class="card">
+            <input type="text" name="pok2name[]" class="form-control" id="pok25" placeholder="Digite nome Pokemon" onKeypress="return apenasLetras(event)">
+            <div class="ambienteImagem"><img id="imagemCard11" class="sprites"></div>
+            <input id="pok25base" name="pokemonLadoB[]" class="pokemonBaseExperience" type="number" disabled="disabled" placeholder="Força:">
+          </div>
+
+          <div class="card">
+            <input type="text" name="pok2name[]" class="form-control" id="pok26" placeholder="Digite nome Pokemon" onKeypress="return apenasLetras(event)">
+            <div class="ambienteImagem"><img id="imagemCard12" class="sprites"></div>
+            
+            <input id="pok26base" name="pokemonLadoB[]" class="pokemonBaseExperience" type="number" disabled="disabled" placeholder="Força:">
+          </div>
+
+
+          <input type="number" class="form-control" name="resultado2" id="resultado2" readonly placeholder="Total =" value="" style="display: block; margin: 0 auto;">
+
         </div>
+        
       </div>    
 
       <div class="col text-center">
-        
+
         <!--chamada da função valorPokemon() ao clicar no botao Calcular -->
         
         <input type="button" class="btn-secondary btn-lg" name="resultadoPokemon" value="Calcular" style="padding: 5px; margin-top: 10px; width: 200px">
