@@ -58,7 +58,7 @@
           <label for="jog1">Lado A: Pokemons ofertados (máximo 6)</label>
 
           <div class="card">
-            <input type="text" name="pok1name[]" class="form-control " id="pok11" placeholder="Digite nome Pokemon" onKeypress="return apenasLetras(event)">
+            <input type="text" name="pok1name[]" class="form-control" id="pok11" placeholder="Digite nome Pokemon" onKeypress="return apenasLetras(event)">
             <div class="ambienteImagem"><img id="imagemCard1" class="sprites"></div>
             <input id="pok11base" name="pokemonLadoA[]" class="pokemonBaseExperience" type="number" disabled="disabled" placeholder="Força:">
           </div>
