@@ -1,5 +1,6 @@
 
-$(document).ready(function(){
+$(document).ready(function()
+{
 
   //Atribui aos campos de código do Pokemon a função que carrega os dados dos pokemons:
   $("#pok11").focusout(function(){
@@ -39,7 +40,18 @@ $(document).ready(function(){
     carregarPokemon("pok26");
   });
   
+
+
+  
+/*
+  //Atribui aos campos de código do Pokemon a função que carrega os dados dos pokemons:
+  $(document).ready(function(){
+  $(".escolhaPokemon").focusout(function(){
+    carregarPokemon("pok11");
+  });
 });
+*/
+
 
 
 
@@ -65,15 +77,15 @@ $('input[name="resultadoPokemon"]').click(function()
     }
   });
 
+});
 
 
 
-
-//Carregas os dados de um Pokemon da API informado por nome:
+//Carregas os dados de um Pokemon da API informado por número ou nome:
 function carregarPokemon(nomeCampo)
 {
-  let pokemon = $("#"+nomeCampo).val();
-  let pokemonAPIURL="";
+  var pokemon = $("#"+nomeCampo).val();
+  var pokemonAPIURL="";
   if(pokemon!=="")
   {
     pokemonAPIURL = "https://pokeapi.co/api/v2/pokemon/"+pokemon+"/";
@@ -96,13 +108,6 @@ function carregarPokemon(nomeCampo)
           });
   }
 }
-
-/*   $("[name='pok1name[]']").focusout(function(){
-    carregarPokemon("pok1name[]");
-  });
-  });
-
-  */
 
 //Faz todo o somatório:
 function somaLados()
@@ -156,7 +161,9 @@ function habilitarCampos()
 
 function apenasLetras(e)
 {
-  var expressao = /[0-9]/;
+  var expressao;
+
+  expressao = /[0-9]/;
 
   if(expressao.test(String.fromCharCode(e.keyCode)))
   {
