@@ -15,7 +15,7 @@ Uma página básica, com poucas imagens, efeito css, formulário simples e ajust
 no campo de cada jogador, existem 6 cards vazios que para preencher basta inserir o nome do Pokémon. Automaticamente teremos a resposta da força base do elemento.
 O app soma e calcula a diferença de cada jogador, apontando se a troca é justa ou não.
 
-Para efetuar a troca é preciso clicar no botão "Clique para trocar seu Pokémon". Você será redirecionado para a página histórico.php
+Para efetuar a troca é preciso clicar no botão "Clique para trocar seu Pokémon". Você será redirecionado para a página histórico.php.
 O botão "Clique para ver o histórico" redireciona para a mesma página, porém apenas para visualização.
 
 Em histórico.php temos a página que apresenta uma visualização renderizada do nosso Banco de Dados, com todas as trocas já efetuadas.
