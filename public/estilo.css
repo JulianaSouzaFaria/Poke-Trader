@@ -91,19 +91,20 @@ font-weight: 700;}
 */
 
 .pokemonBaseExperience{
+	border-top: 1px solid gray;
 	background-color: #D0D5D1;
-	width: 60px;
-	color: #5a5755;
-	font-size: .6em;
-	padding: 5px 0;
+	border-radius: 10px;
+	align-content: center;
 	font-weight: 700;
+	font-size: .6em;
 	display: block;
-	margin: 3px auto;
-	text-align: center;
-	}
+	margin: 2px auto;
+	width: 199px;
+	text-align: center;	
+	padding: 8px 0;}
 
 .form-control{
-	border: 1px solid gray;
+	border-bottom: 1px solid gray;
 	background-color:#D0D5D1;
 	border-radius: 10px;
 	align-content: center;
@@ -111,21 +112,25 @@ font-weight: 700;}
 	font-size: .6em;
 	display: block;
 	margin: 0 auto;
-	width: 190px;
-	text-align: center;}
-
+	width: 195px;
+	text-align: center;
+}
 
 div.card{
 	width: 200px;
 	height: 220px;
 	background-color: #D0D5D1;
 	border-radius: 10px;
-	box-shadow: 5px 5px 3px black;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, .4);
 	float: left;
 	position: relative;
     left: 8%;
-	margin: 10px;
+	margin: 15px;
+	-webkit-transition:  all .2s ease-in;
+}
 
+div.card:hover{	
+	-webkit-transform: scale(1.05);
 }
 
 .ambienteImagem{

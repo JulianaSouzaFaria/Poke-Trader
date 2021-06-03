@@ -1,58 +1,11 @@
 
-$(document).ready(function()
-{
 
-  //Atribui aos campos de código do Pokemon a função que carrega os dados dos pokemons:
-  $("#pok11").focusout(function(){
-    carregarPokemon("pok11");
-  });
-  $("#pok12").focusout(function(){
-    carregarPokemon("pok12");
-  });
-  $("#pok13").focusout(function(){
-    carregarPokemon("pok13");
-  });
-  $("#pok14").focusout(function(){
-    carregarPokemon("pok14");
-  });
-  $("#pok15").focusout(function(){
-    carregarPokemon("pok15");
-  });
-  $("#pok16").focusout(function(){
-    carregarPokemon("pok16");
-  });
-  $("#pok21").focusout(function(){
-    carregarPokemon("pok21");
-  });
-  $("#pok22").focusout(function(){
-    carregarPokemon("pok22");
-  });
-  $("#pok23").focusout(function(){
-    carregarPokemon("pok23");
-  });
-  $("#pok24").focusout(function(){
-    carregarPokemon("pok24");
-  });
-  $("#pok25").focusout(function(){
-    carregarPokemon("pok25");
-  });
-  $("#pok26").focusout(function(){
-    carregarPokemon("pok26");
-  });
-  
+$(document).ready(function(){
 
-
-  
-/*
-  //Atribui aos campos de código do Pokemon a função que carrega os dados dos pokemons:
-  $(document).ready(function(){
-  $(".escolhaPokemon").focusout(function(){
-    carregarPokemon("pok11");
+  //Todos os elementos cujo o atributo classe contenha a classe pokload adiciona o listener.
+  $(".pokload").focusout(function() {
+    carregarPokemon(this.id);
   });
-});
-*/
-
-
 
 
 //Cria uma função de verificação se a troca é justa ou não:
@@ -76,16 +29,16 @@ $('input[name="resultadoPokemon"]').click(function()
       document.getElementById("texto").value = "Essa troca é justa!";
     }
   });
-
 });
 
 
 
-//Carregas os dados de um Pokemon da API informado por número ou nome:
+
+//Carregas os dados de um Pokemon da API informado por nome:
 function carregarPokemon(nomeCampo)
 {
-  var pokemon = $("#"+nomeCampo).val();
-  var pokemonAPIURL="";
+  let pokemon = $("#"+nomeCampo).val();
+  let pokemonAPIURL="";
   if(pokemon!=="")
   {
     pokemonAPIURL = "https://pokeapi.co/api/v2/pokemon/"+pokemon+"/";
@@ -98,8 +51,10 @@ function carregarPokemon(nomeCampo)
       {
               //console.log("GetPoke by ID");
               //console.log(data);
+
               let img = data["sprites"]["front_default"];
               document.getElementById("imagemCard1").setAttribute("src", img);
+
               //$("#"+nomeCampo+"name").val(data.name);
               $("#"+nomeCampo+"base").val(data.base_experience);
 
