@@ -1,5 +1,10 @@
 <?php
 //pagina criada para conectar com banco de dados
+
+
+
+
+
 class Conexao {
 
 	private $host = 'localhost';
@@ -21,6 +26,22 @@ class Conexao {
 		}
 	}
 }
+
+
+/*
+$db = parse_url(getenv("DATABASE_URL"));
+$db["path"] = ltrim($db["path"], "postgresql-rugged-54144");
+
+
+$pdo = new PDO("pgsql:" . sprintf(
+    "host=%s;port=%s;user=%s;password=%s;dbname=%s",
+    $db["host"], "ec2-18-214-140-149.compute-1.amazonaws.com"
+    $db["port"], "5432"
+    $db["user"], "ewsbgjzwkuylcr"
+    $db["pass"], "8700f4ffd184ca777de83a2cde24ce9111f8c784d23c39dc76adcbefce2fcd44"
+    ltrim($db["path"], "/")
+));
+*/
 
 
 ?>
