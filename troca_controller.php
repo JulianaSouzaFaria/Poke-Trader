@@ -1,3 +1,3 @@
 <?php
-	require_once '../../bxblue_protegido/controller/troca_controller.php'
+	require_once '../../bxblue_protegido/src/troca_controller.php'
 ?>

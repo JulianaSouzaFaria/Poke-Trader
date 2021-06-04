@@ -56,16 +56,16 @@ require 'troca_controller.php';
               <?php 
               if (is_array($trocas)){
                 foreach($trocas as $key => $troca) { 
-              ?>
+                  ?>
 
-              <tr>
-                <td> <?php echo $troca->troca ?> </td>
-                <td> <?php echo $troca->nome_pokemon ?> </td>
-                <td> <?php echo $troca->base_experience ?> </td>
-                <td> <?php echo date("d/m/Y", strtotime($troca->data_cadastro)) ?> </td>
-              </tr>
+                  <tr>
+                    <td> <?php echo $troca->troca ?> </td>
+                    <td> <?php echo $troca->nome_pokemon ?> </td>
+                    <td> <?php echo $troca->base_experience ?> </td>
+                    <td> <?php echo date("d/m/Y", strtotime($troca->data_cadastro)) ?> </td>
+                  </tr>
                   
-              <?php }} ?>      
+                <?php }} ?>      
 
               </thead>                  
             </table>
@@ -95,14 +95,14 @@ require 'troca_controller.php';
                   foreach($pk_anteriores as $key => $troca) { 
                     ?>
 
-                <tr>
-                  <td> <?php echo $troca->troca ?> </td>
-                  <td> <?php echo $troca->nome_pokemon ?> </td>
-                  <td> <?php echo $troca->base_experience ?> </td>
-                  <td> <?php echo date("d/m/Y", strtotime($troca->data_cadastro)) ?> </td>
-                </tr>
+                    <tr>
+                      <td> <?php echo $troca->troca ?> </td>
+                      <td> <?php echo $troca->nome_pokemon ?> </td>
+                      <td> <?php echo $troca->base_experience ?> </td>
+                      <td> <?php echo date("d/m/Y", strtotime($troca->data_cadastro)) ?> </td>
+                    </tr>
 
-                <?php }} ?>      
+                  <?php }} ?>      
 
                 </thead>                  
               </table>
@@ -116,7 +116,6 @@ require 'troca_controller.php';
           </div>
 
         </form>
-
       </div>
     </body>
-    </html>
+  </html>
