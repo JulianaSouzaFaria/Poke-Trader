@@ -32,7 +32,7 @@ body, html {
 
 .conteudo {
 	color: black;
-	background: white;
+	background: #9BB3CA;
 	text-align: justify;
 	padding: 50px 80px;
 	font-size: 25px;}
@@ -113,8 +113,7 @@ font-weight: 700;}
 	display: block;
 	margin: 0 auto;
 	width: 195px;
-	text-align: center;
-}
+	text-align: center;}
 
 div.card{
 	width: 200px;
@@ -126,22 +125,27 @@ div.card{
 	position: relative;
     left: 8%;
 	margin: 15px;
-	-webkit-transition:  all .2s ease-in;
-}
+	-webkit-transition:  all .2s ease-in;}
 
 div.card:hover{	
-	-webkit-transform: scale(1.05);
-}
+	-webkit-transform: scale(1.05);}
 
 .ambienteImagem{
 	background-color: #F2F2F2;
-	padding: 10px 0;
-}
+	padding: 10px 0;}
 
 .sprites{
 	width: 120px;
 	height: 120px;
 	text-align: center; 
 	display: block;
-	margin: 0 auto;
-}
+	margin: 0 auto;}
+
+.btn-success{
+	background-color: white ;
+	color: #4C6680;
+	border: none;}
+
+.input-group-text {
+	background-color: #5A6268;
+	color: white;}

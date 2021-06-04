@@ -32,12 +32,10 @@ $('input[name="resultadoPokemon"]').click(function()
 });
 
 
-
-
 //Carregas os dados de um Pokemon da API informado por nome:
-function carregarPokemon(nomeCampo)
+function carregarPokemon(idCampo)
 {
-  let pokemon = $("#"+nomeCampo).val();
+  let pokemon = $("#"+idCampo).val();
   let pokemonAPIURL="";
   if(pokemon!=="")
   {
@@ -48,15 +46,15 @@ function carregarPokemon(nomeCampo)
       type: 'GET',
       dataType: 'json',
       success: function(data) 
-      {
-              //console.log("GetPoke by ID");
-              //console.log(data);
+      {            
 
-              let img = data["sprites"]["front_default"];
-              document.getElementById("imagemCard1").setAttribute("src", img);
+              //buscando URL da imagem desse Pokemon
+              let imgUrl = data["sprites"]["front_default"];
+              //carregando imagem no card
+              $("#" + idCampo + "Imagem").attr("src", imgUrl);
 
-              //$("#"+nomeCampo+"name").val(data.name);
-              $("#"+nomeCampo+"base").val(data.base_experience);
+              //buscando base_experience desse Pokemon
+              $("#"+idCampo+"Base").val(data.base_experience);
 
               somaLados();
             }
@@ -114,11 +112,8 @@ function habilitarCampos()
 }
 
 
-function apenasLetras(e)
-{
-  var expressao;
-
-  expressao = /[0-9]/;
+function apenasLetras(e){
+  var expressao = /[0-9]/;
 
   if(expressao.test(String.fromCharCode(e.keyCode)))
   {
@@ -129,3 +124,4 @@ function apenasLetras(e)
     return true;
   }
 }
+
